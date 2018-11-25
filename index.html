@@ -59,15 +59,64 @@
 		}
 		</script>
 <!-- END NAV -->
+<div class="container">
+
+		<h1 class="animated fadeIn" id="header">GABRIEL DEAN</h1>
+		<p class="text" class="animated fadeIn">Web Developer</p>
+
+	<div class="terminal">
+    <span class="dollar"></span> hi there, i'm gab
+    <br/>
+    <span class="dollar"></span> a web developer
+    <br/>
+    <span class="dollar"></span> based in ph
+    <br/>
+    <span class="dollar"></span> welcome to my portfolio
+    <br/>
+    <span class="dollar"></span> i build website for your business
+    <br>
+    <span class="dollar"></span> or personal
+    <br>
+    <span></span><img src="assets/images/simpson.gif" id="funny">
+  </div>
+
+</div>
 
 
-<h1 class="animated fadeIn" id="header">GABRIEL DEAN</h1>
-<p class="text" class="animated fadeIn">Web Developer</p>
 
+
+ <script type="text/javascript">
+ 	$.fn.typewriter = function() {
+  this.each(function() {
+    var c = $(this),
+      b = c.html(),
+      a = 0,
+      d = 0;
+    c.html("");
+    var e = function() {
+      if ("<" == b.substring(a, a + 1)) {
+        var f = new RegExp(/<span class="instant"/),
+          g = new RegExp(/<span class="clear"/);
+        if (b.substring(a, b.length).match(f)) a += b.substring(a, b.length).indexOf("</span>") + 7;
+        else if (b.substring(a, b.length).match(g)) d = a, a += b.substring(a, b.length).indexOf("</span>") + 7;
+        else
+          for (;
+            ">" != b.substring(a, a + 1);) a++
+      }
+      c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
+      a >= b.length || setTimeout(e, 70 + 100 *
+        Math.random())
+    };
+    e()
+  });
+  return this
+};
+$(".terminal").typewriter();
+ </script>
 
 <div class="footer">
   <p>Gabriel Dean |  Copyright &copy; 2018</p>
-</div
+</div>
 
 </body>
 </html>
